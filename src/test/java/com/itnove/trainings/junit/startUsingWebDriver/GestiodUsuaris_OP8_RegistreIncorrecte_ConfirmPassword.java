@@ -1,77 +1,64 @@
 package com.itnove.trainings.junit.startUsingWebDriver;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-public class GestiodUsuaris_OP2_RegistreCorrecte extends BaseTest {
+public class GestiodUsuaris_OP8_RegistreIncorrecte_ConfirmPassword extends BaseTest {
 
     @Test
     public void testApp() throws InterruptedException {
         //TS0
         driver.manage().window().fullscreen();
-        driver.navigate().to("http://95.85.29.238/index.php?route=common/home");
+        driver.navigate().to("http://95.85.29.238/index.php?route=account/register");
         //TS1
-        WebElement iconaUsuari = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]"));
-        iconaUsuari.click();
-        Thread.sleep(2000);
-        //TS2
-        WebElement pestanyaRegister = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[1]/a"));
-        pestanyaRegister.click();
-        //TS3
-        Assert.assertTrue(!driver.getCurrentUrl().contentEquals("http://95.85.29.238/index.php?route=common/home"));
-        //TS4
         WebElement firstName = driver.findElement(By.xpath("//*[@id=\"input-firstname\"]"));
         firstName.click();
-        //TS5
-        firstName.sendKeys("Cristina");
+        //TS2
+        firstName.sendKeys("Cris");
         Thread.sleep(2000);
-        //TS6
+        //TS3
         WebElement lastName = driver.findElement(By.xpath("//*[@id=\"input-lastname\"]"));
         lastName.click();
-        //TS7
-        lastName.sendKeys("Mathews");
+        //TS4
+        lastName.sendKeys("Matthews");
         Thread.sleep(2000);
-        //TS8
+        //TS5
         WebElement quadreEmail = driver.findElement(By.xpath("//*[@id=\"input-email\"]"));
         quadreEmail.click();
-        //TS9
-        quadreEmail.sendKeys("trocotro@gmail.com");
+        //TS6
+        quadreEmail.sendKeys("crismatthews@gmail.com");
         Thread.sleep(2000);
-        //TS10
+        //TS7
         WebElement quadreTelf = driver.findElement(By.xpath("//*[@id=\"input-telephone\"]"));
         quadreTelf.click();
-        //TS11
-        quadreTelf.sendKeys("622222223");
+        //TS8
+        quadreTelf.sendKeys("633333333");
         Thread.sleep(2000);
-        //TS12
+        //TS9
         WebElement quadrePassword = driver.findElement(By.xpath("//*[@id=\"input-password\"]"));
         quadrePassword.click();
-        //TS13
+        //TS10
         quadrePassword.sendKeys("Password1");
         Thread.sleep(2000);
-        //TS14
+        //TS11
         WebElement quadreConfirmPassword = driver.findElement(By.xpath("//*[@id=\"input-confirm\"]"));
         quadreConfirmPassword.click();
-        //TS15
-        quadreConfirmPassword.sendKeys("Password1");
+        //TS12
+        quadreConfirmPassword.sendKeys("Password2");
         Thread.sleep(2000);
-        //TS16
+        //TS13
         WebElement newsletterYes = driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset[3]/div/div/label[1]/input"));
         newsletterYes.click();
-        //TS17
+        //TS14
         WebElement privacyPolicy = driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[1]"));
         privacyPolicy.click();
         Thread.sleep(2000);
-        //TS18
+        //TS15
         WebElement continuar = driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[2]"));
         continuar.click();
-        //TS19
         Thread.sleep(10000);
-        Assert.assertTrue(!driver.getCurrentUrl().contentEquals("http://95.85.29.238/index.php?route=account/register"));
-        Thread.sleep(4000);
 
     }
 }
