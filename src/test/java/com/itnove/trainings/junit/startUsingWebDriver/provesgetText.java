@@ -23,6 +23,8 @@ public class provesgetText extends BaseTest {
         search.click();
         //TS5
         search.sendKeys("funny unicorns");
+        search.submit();
+        //Assert.assertTrue(driver.getPageSource().contains("patata"));
         //System.out.println(search.getText());
         //Assert.assertTrue(search.getText().contentEquals("funny unicorns"));
         Thread.sleep(8000);

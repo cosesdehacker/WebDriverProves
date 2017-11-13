@@ -38,7 +38,7 @@ public class GestiodUsuaris_OP2_RegistreCorrecte extends BaseTest {
         WebElement quadreEmail = driver.findElement(By.xpath("//*[@id=\"input-email\"]"));
         quadreEmail.click();
         //TS9
-        quadreEmail.sendKeys("trocotro@gmail.com");
+        quadreEmail.sendKeys("nasrodo@gmail.com");
         Thread.sleep(2000);
         //TS10
         WebElement quadreTelf = driver.findElement(By.xpath("//*[@id=\"input-telephone\"]"));

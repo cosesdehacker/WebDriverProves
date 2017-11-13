@@ -18,7 +18,7 @@ public class GestiodUsuaris_OP9_LoginCorrecte extends BaseTest {
         iconaUsuari.click();
         Thread.sleep(2000);
         //TS2
-        WebElement pestanyaLogin = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a");
+        WebElement pestanyaLogin = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a"));
         pestanyaLogin.click();
         //TS3
         Assert.assertTrue(!driver.getCurrentUrl().contentEquals("http://95.85.29.238/index.php?route=common/home"));

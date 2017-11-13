@@ -11,9 +11,6 @@ import java.io.File;
 import java.io.IOException;
 
 
-/**
- * Created by guillem on 29/02/16.
- */
 public class BaseTest {
     public RemoteWebDriver driver;
 
