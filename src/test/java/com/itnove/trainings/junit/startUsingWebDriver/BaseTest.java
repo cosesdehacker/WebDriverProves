@@ -1,7 +1,9 @@
 package com.itnove.trainings.junit.startUsingWebDriver;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -12,18 +14,19 @@ import java.io.IOException;
 
 
 public class BaseTest {
-    public RemoteWebDriver driver;
+    public static RemoteWebDriver driver;
 
-    @Before
-    public void setUp() throws IOException {
+    @BeforeClass
+    public static void setUp() throws IOException {
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         System.setProperty("webdriver.chrome.driver", "src" + File.separator + "main"
-                + File.separator + "resources" + File.separator + "chromedriver-macos");
+                + File.separator + "resources" + File.separator + "chromedriver-linux");
         driver = new ChromeDriver(capabilities);
+        driver.manage().deleteAllCookies();
     }
 
-    @After
-    public void tearDown() {
+    @AfterClass
+    public static void tearDown() {
         driver.quit();
     }
 

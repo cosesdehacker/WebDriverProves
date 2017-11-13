@@ -12,7 +12,7 @@ public class GestiodUsuaris_OP4_RegistreIncorrecte_FormatEmail extends BaseTest 
     public void testApp() throws InterruptedException {
         //TS0
         driver.manage().window().fullscreen();
-        driver.navigate().to("http://95.85.29.238/index.php?route=account/register");
+        driver.navigate().to("http://opencart.votarem.lu/index.php?route=account/register");
         //TS1
         WebElement firstName = driver.findElement(By.xpath("//*[@id=\"input-firstname\"]"));
         firstName.click();

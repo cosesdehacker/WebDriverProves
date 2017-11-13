@@ -12,7 +12,7 @@ public class GestiodUsuaris_OP2_RegistreCorrecte extends BaseTest {
     public void testApp() throws InterruptedException {
         //TS0
         driver.manage().window().fullscreen();
-        driver.navigate().to("http://95.85.29.238/index.php?route=common/home");
+        driver.navigate().to("http://opencart.votarem.lu/index.php?route=common/home");
         //TS1
         WebElement iconaUsuari = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]"));
         iconaUsuari.click();
@@ -21,7 +21,7 @@ public class GestiodUsuaris_OP2_RegistreCorrecte extends BaseTest {
         WebElement pestanyaRegister = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[1]/a"));
         pestanyaRegister.click();
         //TS3
-        Assert.assertTrue(!driver.getCurrentUrl().contentEquals("http://95.85.29.238/index.php?route=common/home"));
+        Assert.assertTrue(!driver.getCurrentUrl().contentEquals("http://opencart.votarem.lu/index.php?route=common/home"));
         //TS4
         WebElement firstName = driver.findElement(By.xpath("//*[@id=\"input-firstname\"]"));
         firstName.click();
@@ -70,7 +70,7 @@ public class GestiodUsuaris_OP2_RegistreCorrecte extends BaseTest {
         continuar.click();
         //TS19
         Thread.sleep(10000);
-        Assert.assertTrue(!driver.getCurrentUrl().contentEquals("http://95.85.29.238/index.php?route=account/register"));
+        Assert.assertTrue(!driver.getCurrentUrl().contentEquals("http://opencart.votarem.lu/index.php?route=account/register"));
         Thread.sleep(4000);
 
     }

@@ -12,7 +12,7 @@ public class Cerca_OP12_ProducteExistent1 extends BaseTest {
     public void testApp() throws InterruptedException {
         //TS0
         driver.manage().window().fullscreen();
-        driver.navigate().to("http://95.85.29.238/index.php?route=common/home");
+        driver.navigate().to("http://opencart.votarem.lu/index.php?route=common/home");
         //TS1
         WebElement quadreCerca = driver.findElement(By.xpath("//*[@id=\"search\"]/input"));
         quadreCerca.click();
@@ -22,7 +22,7 @@ public class Cerca_OP12_ProducteExistent1 extends BaseTest {
         WebElement lupa = driver.findElement(By.xpath("//*[@id=\"search\"]/span/button"));
         lupa.click();
         String URL = driver.getCurrentUrl();
-        Assert.assertTrue(!URL.contentEquals("http://95.85.29.238/index.php?route=common/home"));
+        Assert.assertTrue(!URL.contentEquals("http://opencart.votarem.lu/index.php?route=common/home"));
         Thread.sleep(8000);
         //TS3
         WebElement quadreResultats = driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]"));
